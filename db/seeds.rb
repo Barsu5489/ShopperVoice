@@ -8,5 +8,7 @@ Product.create(
     description:'leather',
     price: 20
 )
-
+User.create(
+    username: 'Kenyan'
+)
 puts "reviews ends ⭐"
