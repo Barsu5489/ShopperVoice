@@ -1,14 +1,14 @@
 puts "review start ⭐"
-Review.create(
+rating = Review.create(
     comment: 'nice product',
     star_rating: 5
 )
-Product.create(
+product = Product.create(
     name: 'ball',
     description:'leather',
     price: 20
 )
-User.create(
+person = User.create(
     username: 'Kenyan'
 )
 puts "reviews ends ⭐"
