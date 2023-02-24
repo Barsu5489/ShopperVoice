@@ -23,4 +23,5 @@ gem "require_all"
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry"
+  gem "faker", "~> 2.18"
   end
