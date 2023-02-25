@@ -21,12 +21,16 @@ ActiveRecord::Schema.define(version: 2023_02_24_214014) do
   create_table "reviews", force: :cascade do |t|
     t.string "comment"
     t.integer "star_rating"
-    t.integer "product_id"
-    t.integer "user_id"
+    t.integer "user_id", null: false
+    t.integer "product_id", null: false
+    t.index ["product_id"], name: "index_reviews_on_product_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
   end
 
+  add_foreign_key "reviews", "products"
+  add_foreign_key "reviews", "users"
 end
