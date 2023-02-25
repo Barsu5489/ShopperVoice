@@ -9,4 +9,7 @@ class Review < ActiveRecord::Base
     def review_product
         product
     end
+    def print_review
+        puts "Review for #{product.name} by #{user.username}: #{self.star_rating} #{self.comment}"
+    end
 end
