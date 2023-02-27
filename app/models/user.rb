@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
     def user_products
         products
     end
+
+    def favorite_product
+        reviews.order(star_rating: :desc).first.product
+      end
 end
